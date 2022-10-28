@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('./cors');
 
 const PORT = process.env.PORT || 4000;
 
@@ -8,7 +9,8 @@ const app = express();
 app.use(express.json());
 
 
-app.get('/api', (req, res) => {
+app.options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
+.get('/api', cors.cors, (req, res) => {
     const data = {
         "slackUsername": "Ocee",
         "backend": true,
