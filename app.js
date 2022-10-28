@@ -13,7 +13,7 @@ app.get('/api', (req, res) => {
         "slackUsername": "Ocee",
         "backend": true,
         "age": 23,
-        "bio": "My name is James, I am a backend web developer. A graduate of Computer Science from Caritas University"
+        "bio": "My name is James Ochapa, I am a backend web developer. A graduate of Computer Science from Caritas University"
     };
     res.json(data);
 });
